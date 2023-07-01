@@ -1,6 +1,6 @@
 import {
-  HttpException,
-  HttpStatus,
+  // HttpException,
+  // HttpStatus,
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
@@ -32,6 +32,7 @@ export class CoffeesService {
   //Dto: Data Transfer Object
   create(createCoffeeDto: any) {
     this.coffees.push(createCoffeeDto);
+    return createCoffeeDto;
   }
 
   update(id: string, updateCoffeeDto: any) {
