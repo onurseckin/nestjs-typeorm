@@ -19,7 +19,7 @@ import { COFFEE_BRANDS } from './coffees.constants';
     CoffeesService,
     {
       provide: COFFEE_BRANDS, // String-valued token
-      useValue: ['buddy brew', 'nescafe'], // array of coffee brands,
+      useFactory: () => ['buddy brew', 'nescafe'], // array of coffee brands,
     },
   ],
 })
